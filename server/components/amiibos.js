@@ -6,6 +6,7 @@ module.exports = {
       na: 'NVL-C-AAAA-USZ',
       eu: 'NVL-C-AAAA-EUR-CO'
     },
+    ean: 4902370522259,
     gamestop: {
       sku: 104546,
       online: 117072
@@ -35,6 +36,7 @@ module.exports = {
       na: 'NVL-C-AAAB-USZ',
       eu: 'NVL-C-AAAB-EUR-CO'
     },
+    ean: 4902370522266,
     gamestop: {
       sku: 104547,
       online: 117071
@@ -64,6 +66,7 @@ module.exports = {
       na: 'NVL-C-AAAC-USZ',
       eu: 'NVL-C-AAAC-EUR-CO'
     },
+    ean: 4902370522273,
     gamestop: {
       sku: 104548,
       online: 117069
@@ -93,6 +96,7 @@ module.exports = {
       na: 'NVL-C-AAAD-USZ',
       eu: 'NVL-C-AAAD-EUR-CO'
     },
+    ean: 4902370522280,
     gamestop: {
       sku: 104545,
       online: 117070
@@ -122,6 +126,7 @@ module.exports = {
       na: 'NVL-C-AAAE-USZ',
       eu: 'NVL-C-AAAE-EUR-CO'
     },
+    ean: 4902370522297,
     gamestop: {
       sku: 104549,
       online: 117063
@@ -151,6 +156,7 @@ module.exports = {
       na: 'NVL-C-AAAF-USZ',
       eu: 'NVL-C-AAAF-EUR-CO'
     },
+    ean: 4902370522303,
     gamestop: {
       sku: 104550,
       online: 117065
@@ -180,6 +186,7 @@ module.exports = {
       na: 'NVL-C-AAAG-USZ',
       eu: 'NVL-C-AAAG-EUR-CO'
     },
+    ean: 4902370522310,
     gamestop: {
       sku: 104551,
       online: 117061
@@ -209,6 +216,7 @@ module.exports = {
       na: 'NVL-C-AAAH-USZ',
       eu: 'NVL-C-AAAH-EUR-CO'
     },
+    ean: 4902370522327,
     gamestop: {
       sku: 104552,
       online: 117064
@@ -224,8 +232,8 @@ module.exports = {
       asin: 'B00N49EERY'
     },
     walmart: {
-      sku: null,
-      online: null
+      sku: 553267023,
+      online: 40571990
     },
     toysrus: {
       skuId: null,
@@ -238,6 +246,7 @@ module.exports = {
       na: 'NVL-C-AAAJ-USZ',
       eu: 'NVL-C-AAAJ-EUR-CO'
     },
+    ean: 4902370522334,
     gamestop: {
       sku: 104553,
       online: 117059
@@ -253,11 +262,11 @@ module.exports = {
       asin: 'B00N4ABMUA'
     },
     walmart: {
-      sku: null,
-      online: null
+      sku: 553267013,
+      online: 40571989
     },
     toysrus: {
-      skuId: null,
+      skuId: 19472373,
       sku: '9AEA32D2',
       productId: 46105496
     }
@@ -267,6 +276,7 @@ module.exports = {
       na: 'NVL-C-AAAK-USZ',
       eu: 'NVL-C-AAAK-EUR-CO'
     },
+    ean: 4902370522341,
     gamestop: {
       sku: 104554,
       online: 117068
@@ -296,6 +306,7 @@ module.exports = {
       na: 'NVL-C-AAAL-USZ',
       eu: 'NVL-C-AAAL-EUR-CO'
     },
+    ean: 4902370522358,
     gamestop: {
       sku: 104555,
       online: 117066
@@ -325,6 +336,7 @@ module.exports = {
       na: 'NVL-C-AAAM-USZ',
       eu: 'NVL-C-AAAM-EUR-CO'
     },
+    ean: 4902370522365,
     gamestop: {
       sku: 104556,
       online: 117060
@@ -340,8 +352,8 @@ module.exports = {
       asin: 'B00N4ABOXU'
     },
     walmart: {
-      sku: null,
-      online: null
+      sku: 553266973,
+      online: 40571987
     },
     toysrus: {
       skuId: 19472219,
@@ -354,6 +366,7 @@ module.exports = {
       na: 'NVL-C-AAAQ-USZ',
       eu: 'NVL-C-AAAQ-EUR-CO'
     },
+    ean: 4902370522396,
     gamestop: {
       sku: 106340,
       online: 117862
@@ -383,6 +396,7 @@ module.exports = {
       na: 'NVL-C-AAAP-USZ',
       eu: 'NVL-C-AAAP-EUR-CO'
     },
+    ean: 4902370522389,
     gamestop: {
       sku: 106346,
       online: 117863
@@ -412,6 +426,7 @@ module.exports = {
       na: 'NVL-C-AAAN-USZ',
       eu: 'NVL-C-AAAN-EUR-CO'
     },
+    ean: 4902370522372,
     gamestop: {
       sku: 106342,
       online: 117861
@@ -441,6 +456,7 @@ module.exports = {
       na: 'NVL-C-AAAR-USZ',
       eu: 'NVL-C-AAAR-EUR-CO'
     },
+    ean: 4902370522402,
     gamestop: {
       sku: 106348,
       online: 117860
@@ -470,6 +486,7 @@ module.exports = {
       na: 'NVL-C-AAAU-USZ',
       eu: 'NVL-C-AAAU-EUR-CO'
     },
+    ean: 4902370522921,
     gamestop: {
       sku: 106344,
       online: 117858
@@ -499,6 +516,7 @@ module.exports = {
       na: 'NVL-C-AAAS-USZ',
       eu: 'NVL-C-AAAS-EUR-CO'
     },
+    ean: 4902370522419,
     gamestop: {
       sku: 106338,
       online: 117859
@@ -528,8 +546,9 @@ module.exports = {
       na: 'NVL-C-AAAV-USZ',
       eu: 'NVL-C-AAAV-EUR-CO'
     },
+    ean: 4902370522990,
     gamestop: {
-      sku: 0,
+      sku: null,
       online: null
     },
     target: {
@@ -557,6 +576,7 @@ module.exports = {
       na: 'NVL-C-AAAW-USZ',
       eu: 'NVL-C-AAAW-EUR-CO'
     },
+    ean: 4902370523003,
     gamestop: {
       sku: 108110,
       online: 118952
@@ -586,6 +606,7 @@ module.exports = {
       na: 'NVL-C-AAAT-USZ',
       eu: 'NVL-C-AAAT-EUR-CO'
     },
+    ean: 4902370522426,
     gamestop: {
       sku: null,
       online: null
@@ -615,6 +636,7 @@ module.exports = {
       na: 'NVL-C-AAAY-USZ',
       eu: 'NVL-C-AAAY-EUR-CO'
     },
+    ean: 4902370523027,
     gamestop: {
       sku: 108116,
       online: 118956
@@ -639,11 +661,12 @@ module.exports = {
       productId: null
     }
   },
-  shiek: {
+  sheik: {
     productCode: {
       na: 'NVL-C-AAAZ-USZ',
       eu: 'NVL-C-AAAZ-EUR-CO'
     },
+    ean: 4902370523034,
     gamestop: {
       sku: 108101,
       online: 118951
@@ -673,6 +696,7 @@ module.exports = {
       na: 'NVL-C-AABS-USZ',
       eu: 'NVL-C-AABS-EUR-CO'
     },
+    ean: 4902370523393,
     gamestop: {
       sku: 108112,
       online: 118957
@@ -702,6 +726,7 @@ module.exports = {
       na: 'NVL-C-AABA-USZ',
       eu: 'NVL-C-AABA-EUR-CO'
     },
+    ean: 4902370523041,
     gamestop: {
       sku: 108105,
       online: 118948
@@ -731,6 +756,7 @@ module.exports = {
       na: null,
       eu: null
     },
+    ean: null,
     gamestop: {
       sku: 107766,
       online: 118681
@@ -760,6 +786,7 @@ module.exports = {
       na: null,
       eu: null
     },
+    ean: null,
     gamestop: {
       sku: 108118,
       online: 118955
@@ -789,6 +816,7 @@ module.exports = {
       na: null,
       eu: null
     },
+    ean: null,
     gamestop: {
       sku: 108103,
       online: 118949
@@ -818,6 +846,7 @@ module.exports = {
       na: 'NVL-C-AABR-USZ',
       eu: 'NVL-C-AABR-EUR-CO'
     },
+    ean: 4902370523409,
     gamestop: {
       sku: null,
       online: null

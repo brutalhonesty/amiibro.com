@@ -1,6 +1,6 @@
 'use strict';
 
-var request = require('request');
+var request = require('request').defaults({jar: true});
 var qs = require('querystring');
 var url = require('url');
 var cheerio = require('cheerio');
@@ -151,9 +151,12 @@ function _parseToysRUs(body, callback) {
       inStoreAvailability:  availability,
       inStoreAvailabilityUpdateDate: null,
       miles: $(this).find('td.location span.storeDistance strong').text().split(' miles')[0],
-    }
+    };
     addresses.push(address);
   });
+  if(addresses.length === 0) {
+    addresses = null;
+  }
   return callback(null, {stores: addresses, item: null});
 }
 
@@ -212,22 +215,7 @@ function _parseAmazonBody(body, callback) {
     addToCartUrl: null,
     mobileUrl: null
   };
-  var stores = [{
-    name: 'Amazon.com',
-    address: null,
-    address2: null,
-    city: null,
-    state: null,
-    zipcode: null,
-    country: null,
-    phone: null,
-    hours: null,
-    gmtOffset: null,
-    inStoreAvailability: item['Offers']['TotalOffers'] > 0 ? true : false,
-    inStoreAvailabilityUpdateDate: null,
-    miles: null
-  }];
-  return callback(null, {item: newItem, stores: stores});
+  return callback(null, {item: newItem, stores: null});
 }
 
 // https://api.walmartlabs.com/v1/items?ids=41488612,41488614,41488611,41488613,40571997,41488608,41488610,41488609,40571996&apiKey=<MY API KEY>
@@ -408,11 +396,12 @@ exports.target = function (amiibo, zip, radius, callback) {
     }
   }, function (error, resp, storeBody) {
     if(error) {
-      return callback(error);
+      console.log(error);
+      return callback(null, {item: null, stores: null});
     }
     if(resp.statusCode !== 200) {
       console.log(storeBody);
-      return callback(null, {});
+      return callback(null, {item: null, stores: null});
     }
     var baseUrl = 'http://tws.target.com/productservice/services/item_service/v1/by_itemid';
     var id = amiibo.dpci;
@@ -422,15 +411,18 @@ exports.target = function (amiibo, zip, radius, callback) {
       alt: 'json'
     });
     var URL = baseUrl + '?' + parameters;
-    request.get(URL, {
+    var req = request.get(URL, {
       headers: {
-        'Accept': 'application/json',
-        'Cookie': 'twsakalb=pky',
+        'Accept': '*/*',
+        'Host':'tws.target.com',
+        'DNT': '1',
+        'Cookie':'twsakalb=scs',
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
       }
     }, function (error, resp, itemBody) {
       if(error) {
-        return callback(error);
+        console.log(error);
+        return callback(null, {item: null, stores: null});
       }
       if(resp.statusCode !== 200) {
         console.log(itemBody);

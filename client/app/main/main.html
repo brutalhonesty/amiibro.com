@@ -1,12 +1,13 @@
 <div layout-gt-sm="row" ng-repeat="i in getRows(amiibos.length)">
   <div flex="20" ng-repeat="(index, amiibo) in amiibos | offset: i*5">
-    <md-card ng-click="viewPage(amiibo.link)" class="md-whiteframe-z2 amiibo">
+    <md-card class="md-whiteframe-z2 amiibo">
       <img ng-src="{{amiibo.image}}" class="md-card-image" alt="amiibo.title">
       <h3>
         {{amiibo.title}}<sup ng-if="amiibo.hasTrademark" style="font-size: 10pt;">&#8482;</sup><sup ng-if="!amiibo.hasTrademark" style="font-size: 12pt;"></sup>
       </h3>
       <p>
-        <md-button class="md-raised md-primary">View Page</md-button>
+        <md-checkbox ng-model="amiibo.owned" aria-label="Purchased" ng-change="updatePurchases(amiibo)">Purchased</md-checkbox>
+        <md-button class="md-raised md-primary" ng-click="viewPage(amiibo.link)" >View Page</md-button>
       </p>
     </md-card>
   </div>

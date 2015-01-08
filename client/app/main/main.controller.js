@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('amiiBroApp').controller('MainCtrl', ['$scope', '$location', 'amiiboService', function ($scope, $location, amiiboService) {
+angular.module('amiiBroApp').controller('MainCtrl', ['$scope', '$location', 'amiiboService', '$window', function ($scope, $location, amiiboService, $window) {
   $scope.viewPage = function (amiiboLink) {
     $location.path(amiiboLink);
   };
@@ -12,10 +12,24 @@ angular.module('amiiBroApp').controller('MainCtrl', ['$scope', '$location', 'ami
     }
     return rowList;
   };
-  amiiboService.getBasic().success(function (amiiboResp) {
-    $scope.amiibos = amiiboResp;
-  }).error(function (error) {
-    console.log(error);
-    // TODO Show error.
-  });
+  $scope.amiibos = JSON.parse($window.localStorage.getItem('amiibos')) || null;
+  if(!$scope.amiibos) {
+    amiiboService.getBasic().success(function (amiiboResp) {
+      $scope.amiibos = amiiboResp;
+    }).error(function (error) {
+      console.log(error);
+      // TODO Show error.
+    });
+  }
+  $scope.updatePurchases = function (amiibo) {
+    var amiibos = JSON.parse($window.localStorage.getItem('amiibos')) || $scope.amiibos;
+    for (var i = 0; i < amiibos.length; i++) {
+      var oldAmiibo = amiibos[i];
+      if(amiibo.title === oldAmiibo.title) {
+        amiibos[i] = amiibo;
+        break;
+      }
+    }
+    $window.localStorage.setItem('amiibos', JSON.stringify(amiibos));
+  };
 }]);

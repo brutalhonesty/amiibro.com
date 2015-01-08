@@ -10,7 +10,6 @@
     "cheerio": "^0.18.0",
     "composable-middleware": "^0.3.0",
     "compression": "~1.0.1",
-    "connect-mongo": "^0.4.1",
     "cookie-parser": "~1.0.1",
     "csurf": "^1.6.3",
     "ejs": "~0.8.4",

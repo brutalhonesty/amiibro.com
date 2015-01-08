@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('amiiBroApp').controller('AmiiboCtrl', ['$scope', 'amiiboService', '$routeParams', '$mdToast', '$location', '$window', function ($scope, amiiboService, $routeParams, $mdToast, $location, $window) {
+angular.module('amiiBroApp').controller('AmiiboCtrl', ['$scope', 'amiiboService', '$routeParams', '$mdToast', '$location', '$window', '$mdBottomSheet', '$mdDialog', function ($scope, amiiboService, $routeParams, $mdToast, $location, $window, $mdBottomSheet, $mdDialog) {
   amiiboService.byName($routeParams.amiibo).success(function (amiiboResp) {
     $scope.amiibo = amiiboResp.basic;
   }).error(function (error) {
@@ -70,6 +70,41 @@ angular.module('amiiBroApp').controller('AmiiboCtrl', ['$scope', 'amiiboService'
     });
   };
   $scope.getStores = function (retailname) {
-    return $scope.status[retailname]['stores'];
+    if(!$scope.status[retailname]['stores']) {
+      return [];
+    }
+    var stores = $scope.status[retailname]['stores'].map(function (store) {
+      if(store.inStoreAvailability) {
+        return store;
+      }
+    });
+    return stores.filter(function (n) { return n !== undefined; });
+  };
+  $scope.getItem = function(retailname) {
+    return $scope.status[retailname]['item'] || null;
+  };
+  $scope.viewRetailer = function(retailname, $event) {
+    $mdBottomSheet.show({
+      templateUrl: 'app/amiibo/bottom-sheet-list-template.html',
+      controller: 'ListBottomSheetCtrl',
+      targetEvent: $event,
+      locals: {
+        stores: $scope.getStores(retailname),
+        item: $scope.getItem(retailname)
+      }
+    }).then(function (location, $event) {
+      $mdDialog.show({
+        controller: 'DialogCtrl',
+        templateUrl: 'app/amiibo/store-dialog.html',
+        targetEvent: $event,
+        locals: {
+          store: location.store || null,
+          item: location.item || null
+        }
+      })
+      .then(function() {
+      }, function() {
+      });
+    });
   };
 }]);

@@ -1,0 +1,34 @@
+<md-dialog aria-label="{{item.name ? item.name : store.name}} {{item.id ? ('- ' + item.id) : null}}">
+  <md-content>
+    <md-subheader>{{item.name ? item.name : store.name}} {{item.id ? ('- ' + item.id) : null}}</md-subheader>
+    <p>
+      <address ng-if="store">
+        {{store.address}},<br>
+        {{store.address2 ? (store.address2 + ',') : null}}<br ng-if="store.address2">
+        {{store.city}}, {{store.state}}, {{store.zipcode}}<br>
+        <a href="tel:{{store.phone}}">{{store.phone}}</a>
+      </address>
+      <p ng-if="store">
+        Hours: {{store.hours || 'N/A'}}
+        <br>
+        Miles: {{store.miles}}
+      </p>
+      <p ng-if="item">
+        UPC: {{item.upc}}<br>
+        <span ng-class="{'green': item.shipToStore, 'red': !item.shipToStore}">Ship To Store: {{item.shipToStore !== null ? item.shipToStore : 'N/A'}}</span><br>
+        <span ng-class="{'green': item.freeToShipToStore, 'red': !item.freeToShipToStore}">Free To Ship To Store: {{item.freeToShipToStore !== null ? item.freeToShipToStore : 'N/A'}}</span><br>
+        <span ng-class="{'green': item.availableOnline, 'red': !item.availableOnline}">Available Online: {{item.availableOnline !== null ? item.availableOnline : 'N/A'}}</span><br>
+        <section layout="row" layout-sm="column" layout-align="center center">
+          <md-button class="md-raised md-primary" ng-href="{{item.productUrl}}" ng-show="item.productUrl" target="_blank">Product URL</md-button>
+          <md-button class="md-raised md-warn" ng-href="{{item.addToCartUrl}}" ng-show="item.addToCartUrl" target="_blank">Add To Cart</md-button>
+          <md-button class="md-raised md-accent" ng-href="{{item.mobileUrl}}" ng-show="item.mobileUrl" target="_blank">Mobile URL</md-button>
+        </section>
+      </p>
+    </p>
+  </md-content>
+  <div class="md-actions" layout="row">
+    <md-button ng-click="answer('useful')" class="md-primary">
+      Useful
+    </md-button>
+  </div>
+</md-dialog>

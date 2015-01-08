@@ -1,0 +1,17 @@
+<md-bottom-sheet class="md-list md-has-header">
+  <md-subheader ng-show="stores.length > 0">Store Locations</md-subheader>
+  <md-subheader ng-show="stores.length === 0">View Item</md-subheader>
+  <md-list>
+    <md-item ng-repeat="store in stores">
+      <md-button aria-label="{{store.name}}" ng-click="listItemClick($index, $event)">
+        <span class="md-inline-list-icon-label">{{store.name}}</span>
+        <span class="md-inline-list-icon-label" ng-if="store.miles">| {{store.miles}} miles away</span>
+      </md-button>
+    </md-item>
+    <md-item ng-show="stores.length === 0">
+      <md-button aria-label="View Item" ng-click="viewItem($event)">
+        <span class="md-inline-list-icon-label">View Item</span>
+      </md-button>
+    </md-item>
+  </md-list>
+</md-bottom-sheet>

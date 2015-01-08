@@ -247,7 +247,7 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/public/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/public/{,*/}*.css'],
-      js: ['<%= yeoman.dist %>/public/{,*/}*.js'],
+      js: ['<%= yeoman.dist %>/public/{,*/}*.js', '<%= yeoman.dist %>/server/components/{,*/}*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>/public',
@@ -302,7 +302,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'amiibolocatorcomApp',
+        module: 'amiiBroApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,

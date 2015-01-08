@@ -37,9 +37,7 @@ exports.index = function(req, res) {
     return res.status(400).jsonp({message: 'Invalid zipcode, must be 5 digits and a US zipcode.'});
   }
   var amiibo = amiibos[name];
-  var storeNames = Object.keys(amiibo).filter(function (n) {
-    return n !== 'productCode';
-  });
+  var storeNames = Object.keys(amiibo);
   var amiiboResp = {};
   async.eachLimit(storeNames, 10, function (store, callback) {
     if(store === 'walmart') {
@@ -134,6 +132,7 @@ exports.index = function(req, res) {
       var redisKey = name + '-us-' + zip + '-' + radius + '-target';
       client.get(redisKey, function (error, reply) {
         if(error) {
+          console.log(error);
           return callback('Could not get status of Target data.');
         }
         if(!reply) {

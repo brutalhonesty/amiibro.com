@@ -148,20 +148,7 @@
 * @apiSuccess (200 Success) {String} retailers.bestbuy.item.addToCartUrl The add to cart URL which will lead to Bestbuy's website.
 * @apiSuccess (200 Success) {String} retailers.bestbuy.item.mobileUrl The mobile URL which will lead to Bestbuy's website.
 * @apiSuccess (200 Success) {Object} retailers.amazon Amazon response
-* @apiSuccess (200 Success) {Object[]} retailers.amazon.stores The list of stores that have the requested Amiibo, will always be 1 store.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.name The name of the Amazon store.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.address The address of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.address2 The second part of the address of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.city The city of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.state The state of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.zipcode The zipcode of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.country The country of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.phone The phone number of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {String} retailers.amazon.stores.hours The posted hours of the Amazon store, will always be null for Amazon.
-* @apiSuccess (200 Success) {Number} retailers.amazon.stores.gmtOffset The offset of the hours in GMT, will always be null for Amazon.
-* @apiSuccess (200 Success) {Boolean} retailers.amazon.stores.inStoreAvailability Whether of not the store is carrying the Amiibo.
-* @apiSuccess (200 Success) {Date} retailers.amazon.stores.inStoreAvailabilityUpdateDate The last time the availability was updated, will always be null for Amazon.
-* @apiSuccess (200 Success) {Number} retailers.amazon.stores.miles The miles away the store is from the zipcode given, will always be null for Amazon.
+* @apiSuccess (200 Success) {Object[]} retailers.amazon.stores The list of stores that have the requested Amiibo, will always be null for Amazon.
 * @apiSuccess (200 Success) {Object} retailers.amazon.item The item object.
 * @apiSuccess (200 Success) {String} retailers.amazon.item.id The ASIN identifier for Amazon.
 * @apiSuccess (200 Success) {String} retailers.amazon.item.name The name of the product from Amazon's database.
