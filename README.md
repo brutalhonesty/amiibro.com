@@ -13,7 +13,7 @@ Demo
 
 API Docs
 ---------
-[http://amiibro.com//api/docs](http://amiibro.com//api/docs)
+[http://amiibro.com/api/docs](http://amiibro.com/api/docs)
 
 Front-End Coming Soon
 --------------------------------
