@@ -165,21 +165,40 @@ function _parseTargetBody(storeBody, itemBody, callback) {
   for (var i = 0; i < storeBody.products[0].stores.length; i++) {
     var store = storeBody.products[0].stores[i];
     var addrObj = store.formatted_store_address.split(', ');
-    var newStore = {
-      name: store.store_name,
-      address: addrObj[0],
-      address2: null,
-      city: addrObj[1],
-      state: addrObj[2].split(' ')[0],
-      zipcode: addrObj[2].split(' ')[1],
-      country: "US",
-      phone: store.store_main_phone,
-      hours: null,
-      gmtOffset: null,
-      inStoreAvailability: store.onhand_quantity > 0 ? true : false,
-      inStoreAvailabilityUpdateDate: null,
-      miles: store.distance,
-    };
+    var newStore = {};
+    if(addrObj.length === 3) {
+      newStore = {
+        name: store.store_name,
+        address: addrObj[0],
+        address2: null,
+        city: addrObj[1],
+        state: addrObj[2].split(' ')[0],
+        zipcode: addrObj[2].split(' ')[1],
+        country: "US",
+        phone: store.store_main_phone,
+        hours: null,
+        gmtOffset: null,
+        inStoreAvailability: store.onhand_quantity > 0 ? true : false,
+        inStoreAvailabilityUpdateDate: null,
+        miles: store.distance,
+      };
+    } else {
+      newStore = {
+        name: store.store_name,
+        address: addrObj[0],
+        address2: addrObj[1],
+        city: addrObj[2],
+        state: addrObj[3].split(' ')[0],
+        zipcode: addrObj[3].split(' ')[1],
+        country: "US",
+        phone: store.store_main_phone,
+        hours: null,
+        gmtOffset: null,
+        inStoreAvailability: store.onhand_quantity > 0 ? true : false,
+        inStoreAvailabilityUpdateDate: null,
+        miles: store.distance,
+      };
+    }
     newStores.push(newStore);
   }
   var item = itemBody['CatalogEntryView'][0];
