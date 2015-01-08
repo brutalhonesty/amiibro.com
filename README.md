@@ -9,11 +9,11 @@ Currently limited to US searching.
 
 Demo
 ---------
-[https://amiibro.herokuapp.com/](https://amiibro.herokuapp.com/)
+[http://amiibro.com/](http://amiibro.com/)
 
 API Docs
 ---------
-[https://amiibro.herokuapp.com/api/docs](https://amiibro.herokuapp.com/api/docs)
+[http://amiibro.com//api/docs](http://amiibro.com//api/docs)
 
 Front-End Coming Soon
 --------------------------------
