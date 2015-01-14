@@ -232,5 +232,53 @@ module.exports = {
       image: '/assets/images/metaknight.png',
       link: '/amiibo/metaKnight'
     }
+  },
+  robin: {
+    basic: {
+      title: 'Robin',
+      hasTrademark: false,
+      image: '/assets/images/robin.png',
+      link: '/amiibo/robin'
+    }
+  },
+  lucina: {
+    basic: {
+      title: 'Lucina',
+      hasTrademark: false,
+      image: '/assets/images/lucina.png',
+      link: '/amiibo/lucina'
+    }
+  },
+  charizard: {
+    basic: {
+      title: 'Charizard',
+      hasTrademark: false,
+      image: '/assets/images/charizard.png',
+      link: '/amiibo/charizard'
+    }
+  },
+  pacMan: {
+    basic: {
+      title: 'Pac-Mac',
+      hasTrademark: false,
+      image: '/assets/images/pacMan.png',
+      link: '/amiibo/pacMan'
+    }
+  },
+  wario: {
+    basic: {
+      title: 'Wario',
+      hasTrademark: false,
+      image: '/assets/images/wario.png',
+      link: '/amiibo/wario'
+    }
+  },
+  ness: {
+    basic: {
+      title: 'Ness',
+      hasTrademark: false,
+      image: '/assets/images/ness.png',
+      link: '/amiibo/ness'
+    }
   }
 };
