@@ -424,7 +424,7 @@ module.exports = {
       online: 117862
     },
     target: {
-      sku: null,
+      sku: 16623901,
       dpci: '207-00-5014'
     },
     bestbuy: {
@@ -458,7 +458,7 @@ module.exports = {
       online: 117863
     },
     target: {
-      sku: null,
+      sku: 16623899,
       dpci: '207-00-5016'
     },
     bestbuy: {
@@ -468,8 +468,8 @@ module.exports = {
       asin: 'B00O982JSU'
     },
     walmart: {
-      sku: null,
-      online: null
+      sku: 553267089,
+      online: 40572000
     },
     toysrus: {
       skuId: 19948458,
@@ -492,7 +492,7 @@ module.exports = {
       online: 117861
     },
     target: {
-      sku: null,
+      sku: 16623902,
       dpci: '207-00-5013'
     },
     bestbuy: {
@@ -526,7 +526,7 @@ module.exports = {
       online: 117860
     },
     target: {
-      sku: null,
+      sku: 16623900,
       dpci: '207-00-5015'
     },
     bestbuy: {
@@ -536,8 +536,8 @@ module.exports = {
       asin: 'B00O97ZVJA'
     },
     walmart: {
-      sku: null,
-      online: null
+      sku: 553267101,
+      online: 40571996
     },
     toysrus: {
       skuId: 19948481,
@@ -560,7 +560,7 @@ module.exports = {
       online: 117858
     },
     target: {
-      sku: null,
+      sku: 16623897,
       dpci: '207-00-5018'
     },
     bestbuy: {
@@ -594,7 +594,7 @@ module.exports = {
       online: 117859
     },
     target: {
-      sku: null,
+      sku: 16623898,
       dpci: '207-00-5017'
     },
     bestbuy: {
@@ -676,9 +676,9 @@ module.exports = {
       online: 41488609
     },
     toysrus: {
-      skuId: null,
-      sku: null,
-      productId: null
+      skuId: 20214100,
+      sku: '9827D45D',
+      productId: 54369206
     }
   },
   lucario: {
@@ -744,9 +744,9 @@ module.exports = {
       online: 41488610
     },
     toysrus: {
-      skuId: null,
-      sku: null,
-      productId: null
+      skuId: 20213905,
+      sku: '0EB48196',
+      productId: 54369146
     }
   },
   sheik: {
@@ -859,7 +859,7 @@ module.exports = {
     ean: {
       na: null,
       eu: '0045496352714',
-      jp: null
+      jp: '4902370523362'
     },
     gamestop: {
       sku: 107766,
@@ -893,7 +893,7 @@ module.exports = {
     ean: {
       na: '045496891985',
       eu: '0045496352721',
-      jp: null
+      jp: '4902370523379'
     },
     gamestop: {
       sku: 108118,
@@ -927,7 +927,7 @@ module.exports = {
     ean: {
       na: '045496891978',
       eu: '0045496352738',
-      jp: null
+      jp: '4902370523386'
     },
     gamestop: {
       sku: 108103,

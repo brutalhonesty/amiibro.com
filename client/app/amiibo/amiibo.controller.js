@@ -58,6 +58,7 @@ angular.module('amiiBroApp').controller('AmiiboCtrl', ['$scope', 'amiiboService'
     };
     amiiboService.status(statusData).success(function (statusResp) {
       $scope.status = statusResp;
+      $scope.checkAvailability();
       $scope.searching = false;
     }).error(function (error) {
       $scope.searching = false;
@@ -69,16 +70,27 @@ angular.module('amiiBroApp').controller('AmiiboCtrl', ['$scope', 'amiiboService'
       );
     });
   };
+  $scope.checkAvailability = function () {
+    var retailShortNames = $scope.retailers.map(function (retailer) {
+      return retailer.shortname;
+    });
+    for (var i = 0; i < retailShortNames.length; i++) {
+      var shortName = retailShortNames[i];
+      if($scope.status[shortName]['stores']) {
+        $scope.status[shortName]['stores'] = $scope.status[shortName]['stores'].map(function (store) {
+          if(store.inStoreAvailability) {
+            return store;
+          }
+        });
+        $scope.status[shortName]['stores'] = $scope.status[shortName]['stores'].filter(function (n) { return n !== undefined; });
+      }
+    }
+  };
   $scope.getStores = function (retailname) {
     if(!$scope.status[retailname]['stores']) {
       return [];
     }
-    var stores = $scope.status[retailname]['stores'].map(function (store) {
-      if(store.inStoreAvailability) {
-        return store;
-      }
-    });
-    return stores.filter(function (n) { return n !== undefined; });
+    return $scope.status[retailname]['stores'];
   };
   $scope.getItem = function(retailname) {
     return $scope.status[retailname]['item'] || null;

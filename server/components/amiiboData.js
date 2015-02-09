@@ -230,7 +230,7 @@ module.exports = {
       title: 'Meta Knight',
       hasTrademark: false,
       image: '/assets/images/metaknight.png',
-      link: '/amiibo/metaKnight'
+      link: '/amiibo/metaknight'
     }
   },
   robin: {

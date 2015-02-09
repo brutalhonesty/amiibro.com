@@ -22,7 +22,7 @@
         <md-card class="md-whiteframe-z2">
           <img ng-src="{{retailer.image}}" class="md-card-image" alt="{{retailer.title}} Logo" height="200">
           <p>
-            <md-button class="md-raised md-warn" ng-disabled="!status || (!status[retailer.shortname]['stores'] &amp;&amp; !status[retailer.shortname]['item'])" ng-click="viewRetailer(retailer.shortname, $event)" ng-show="!searching">
+            <md-button class="md-raised md-warn" ng-disabled="!status || ((!status[retailer.shortname]['stores'] || status[retailer.shortname]['stores'].length === 0) &amp;&amp; !status[retailer.shortname]['item'])" ng-click="viewRetailer(retailer.shortname, $event)" ng-show="!searching">
               View
             </md-button>
             <md-progress-circular class="md-hue-2" md-mode="indeterminate" ng-show="searching"></md-progress-circular>
@@ -35,7 +35,7 @@
         <md-card class="md-whiteframe-z2">
           <img ng-src="{{retailer.image}}" class="md-card-image" alt="{{retailer.title}} Logo" height="200">
           <p>
-            <md-button class="md-raised md-warn" ng-disabled="!status || (!status[retailer.shortname]['stores'] &amp;&amp; !status[retailer.shortname]['item'])" ng-click="viewRetailer(retailer.shortname, $event)" ng-show="!searching">
+            <md-button class="md-raised md-warn" ng-disabled="!status || ((!status[retailer.shortname]['stores'] || status[retailer.shortname]['stores'].length === 0) &amp;&amp; !status[retailer.shortname]['item'])" ng-click="viewRetailer(retailer.shortname, $event)" ng-show="!searching">
               View
             </md-button>
             <md-progress-circular class="md-hue-2" md-mode="indeterminate" ng-show="searching"></md-progress-circular>
