@@ -29,7 +29,6 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
-  app.use(csrf());
 
   if ('production' === env) {
     app.use(session({
@@ -42,6 +41,7 @@ module.exports = function(app) {
       resave: false,
       saveUninitialized: true
     }));
+    app.use(csrf());
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'public')));
     app.use('/api/docs', express.static(path.join(config.root, 'public/docs')));
@@ -55,6 +55,7 @@ module.exports = function(app) {
       resave: false,
       saveUninitialized: true
     }));
+    app.use(csrf());
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
