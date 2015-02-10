@@ -11,6 +11,7 @@ var compression = require('compression');
 var bodyParser = require('body-parser');
 var csrf = require('csurf');
 var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
 var methodOverride = require('method-override');
 var cookieParser = require('cookie-parser');
 var errorHandler = require('errorhandler');
@@ -28,14 +29,19 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
-  app.use(session({
-    secret: config.session.secret,
-    resave: false,
-    saveUninitialized: true
-  }));
   app.use(csrf());
 
   if ('production' === env) {
+    app.use(session({
+      store: new RedisStore({
+        host: config.redis.host,
+        port: config.redis.port,
+        pass: config.redis.password
+      }),
+      secret: config.session.secret,
+      resave: false,
+      saveUninitialized: true
+    }));
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'public')));
     app.use('/api/docs', express.static(path.join(config.root, 'public/docs')));
@@ -44,6 +50,11 @@ module.exports = function(app) {
   }
 
   if ('development' === env || 'test' === env) {
+    app.use(session({
+      secret: config.session.secret,
+      resave: false,
+      saveUninitialized: true
+    }));
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
