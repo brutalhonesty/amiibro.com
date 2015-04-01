@@ -1190,5 +1190,311 @@ module.exports = {
       sku: null,
       productId: null
     }
+  },
+  greninja: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  jigglypuff: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  darkPit: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  palutena: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  zeroSuitSamus: {
+   productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  ganondorf: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  olimar: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  drMario: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
+  },
+  bowserJr: {
+    productCode: {
+      na: '',
+      eu: ''
+    },
+    ean: {
+      na: null,
+      eu: null,
+      jp: null
+    },
+    gamestop: {
+      sku: null,
+      online: null
+    },
+    target: {
+      sku: null,
+      dpci: null
+    },
+    bestbuy: {
+      sku: null
+    },
+    amazon: {
+      asin: null
+    },
+    walmart: {
+      sku: null,
+      online: null
+    },
+    toysrus: {
+      skuId: null,
+      sku: null,
+      productId: null
+    }
   }
 };

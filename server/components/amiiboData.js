@@ -280,5 +280,77 @@ module.exports = {
       image: '/assets/images/ness.png',
       link: '/amiibo/ness'
     }
+  },
+  greninja: {
+    basic: {
+      title: 'Greninja',
+      hasTrademark: false,
+      image: '/assets/images/greninja.png',
+      link: '/amiibo/greninja'
+    }
+  },
+  jigglypuff: {
+    basic: {
+      title: 'Jigglypuff',
+      hasTrademark: false,
+      image: '/assets/images/jigglypuff.png',
+      link: '/amiibo/jigglypuff'
+    }
+  },
+  darkPit: {
+    basic: {
+      title: 'Dark Pit',
+      hasTrademark: false,
+      image: '/assets/images/darkPit.png',
+      link: '/amiibo/darkPit'
+    }
+  },
+  palutena: {
+    basic: {
+      title: 'Palutena',
+      hasTrademark: false,
+      image: '/assets/images/palutena.png',
+      link: '/amiibo/palutena'
+    }
+  },
+  zeroSuitSamus: {
+    basic: {
+      title: 'Zero Suit Samus',
+      hasTrademark: false,
+      image: '/assets/images/zeroSuitSamus.png',
+      link: '/amiibo/zeroSuitSamus'
+    }
+  },
+  ganondorf: {
+    basic: {
+      title: 'Ganondorf',
+      hasTrademark: false,
+      image: '/assets/images/ganondorf.png',
+      link: '/amiibo/ganondorf'
+    }
+  },
+  olimar: {
+    basic: {
+      title: 'Olimar',
+      hasTrademark: false,
+      image: '/assets/images/olimar.png',
+      link: '/amiibo/olimar'
+    }
+  },
+  drMario: {
+    basic: {
+      title: 'Dr. Mario',
+      hasTrademark: false,
+      image: '/assets/images/drMario.png',
+      link: '/amiibo/drMario'
+    }
+  },
+  bowserJr: {
+    basic: {
+      title: 'Bowser Jr.',
+      hasTrademark: false,
+      image: '/assets/images/bowserJr.png',
+      link: '/amiibo/bowserJr'
+    }
   }
 };
