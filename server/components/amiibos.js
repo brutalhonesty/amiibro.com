@@ -1009,7 +1009,7 @@ module.exports = {
       sku: null
     },
     amazon: {
-      asin: null
+      asin: 'B00V86BRHU'
     },
     walmart: {
       sku: null,
@@ -1043,7 +1043,7 @@ module.exports = {
       sku: null
     },
     amazon: {
-      asin: null
+      asin: 'B00V86BJV4'
     },
     walmart: {
       sku: null,
@@ -1077,7 +1077,7 @@ module.exports = {
       sku: null
     },
     amazon: {
-      asin: null
+      asin: 'B00V86BJX2'
     },
     walmart: {
       sku: null,
@@ -1095,7 +1095,7 @@ module.exports = {
       eu: 'NVL-C-AACC-EUR-CO'
     },
     ean: {
-      na: null,
+      na: '045496892128',
       eu: null,
       jp: null
     },
@@ -1111,7 +1111,7 @@ module.exports = {
       sku: null
     },
     amazon: {
-      asin: null
+      asin: 'B00V86BRK2'
     },
     walmart: {
       sku: null,
@@ -1145,7 +1145,7 @@ module.exports = {
       sku: null
     },
     amazon: {
-      asin: null
+      asin: 'B00V86C4LS'
     },
     walmart: {
       sku: null,
