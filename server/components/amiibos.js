@@ -1240,8 +1240,8 @@ module.exports = {
       online: null
     },
     target: {
-      sku: null,
-      dpci: null
+      sku: 17315174,
+      dpci: '207-00-5033'
     },
     bestbuy: {
       sku: null
